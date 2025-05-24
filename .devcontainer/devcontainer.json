@@ -1,12 +1,13 @@
 {
   "name": "flowise-dev",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "image": "node:18",
   "containerEnv": {
     "OPENROUTER_API_KEY": "${{ secrets.OPENROUTER_API_KEY }}"
   },
-  "features": {},
-  "customizations": {},
-  "postCreateCommand": "pnpm install"
+  "postCreateCommand": "corepack enable && pnpm install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["esbenp.prettier-vscode"]
+    }
+  }
 }
