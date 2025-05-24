@@ -1,0 +1,12 @@
+{
+  "name": "flowise-dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "containerEnv": {
+    "OPENROUTER_API_KEY": "${{ secrets.OPENROUTER_API_KEY }}"
+  },
+  "features": {},
+  "customizations": {},
+  "postCreateCommand": "pnpm install"
+}
